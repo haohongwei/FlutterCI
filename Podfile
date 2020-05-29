@@ -3,11 +3,11 @@
 
 
 #是否在IOS开发环境下编译
-IOSONLY_MODE=1
+IOSONLY_MODE=0
 #是否发布flutter产物到git服务器
 PUBLISH_FLUTTER_PRODUCTION=0
 #在纯IOS开发环境下，使用Debug还是Release模式的Flutter产物
-USE_FLUTTER_PRODUCTION_TYPE="Release"
+USE_FLUTTER_PRODUCTION_TYPE="Debug"
 
 #混合模式走原来的逻辑
 if(IOSONLY_MODE==0)

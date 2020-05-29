@@ -108,8 +108,7 @@
 			buildConfigurationList = 1A560ED1247FA84F00E00B90 /* Build configuration list for PBXNativeTarget "FlutterCI" */;
 			buildPhases = (
 				9B66986AF610BE61A9988A8E /* [CP] Check Pods Manifest.lock */,
-				C77E18DD08EEE0EFD2722B67 /* [CP-User] Run Flutter Build Script */,
-				B46D492C9AB4A523CF5D6A88 /* [CP-User] Upload Flutter Production Script */,
+				C0428D5D08042C5F4547FFA0 /* [CP-User] Run Flutter Build Script */,
 				1A560EB4247FA84E00E00B90 /* Sources */,
 				1A560EB5247FA84E00E00B90 /* Frameworks */,
 				1A560EB6247FA84E00E00B90 /* Resources */,
@@ -192,26 +191,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B46D492C9AB4A523CF5D6A88 /* [CP-User] Upload Flutter Production Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP-User] Upload Flutter Production Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\nset -u\n\"${SRCROOT}\"/../my_flutter/xcode_backend.sh build";
-			showEnvVarsInLog = 0;
-		};
-		C77E18DD08EEE0EFD2722B67 /* [CP-User] Run Flutter Build Script */ = {
+		C0428D5D08042C5F4547FFA0 /* [CP-User] Run Flutter Build Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -413,6 +393,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2US4M37PFA;
 				INFOPLIST_FILE = FlutterCI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -421,6 +402,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Debug;
 		};
@@ -433,6 +415,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2US4M37PFA;
 				INFOPLIST_FILE = FlutterCI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,6 +424,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Release;
 		};

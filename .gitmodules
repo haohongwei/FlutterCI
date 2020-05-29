@@ -1,0 +1,3 @@
+[submodule "flutter_production"]
+	path = flutter_production
+	url = https://github.com/haohongwei/FlutterCI_FlutterProduction.git
